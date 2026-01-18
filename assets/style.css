@@ -1,0 +1,102 @@
+/* assets/style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Conteneur principal pour centrer le contenu */
+.main-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Liens */
+a { text-decoration: none; color: #2196F3; }
+
+/* En-tête / Menu */
+header {
+    background: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Cartes (Utilisé partout : dashboard, admin, login) */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Formulaires */
+.form-group { margin-bottom: 15px; }
+label { display: block; margin-bottom: 5px; font-weight: bold; }
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Boutons */
+button, .btn {
+    display: inline-block;
+    background-color: #FF9800;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+button:hover, .btn:hover { opacity: 0.9; }
+.btn-danger { background-color: #f44336; }
+.btn-admin { background-color: #FF9800; }
+.btn-primary { background-color: #FF9800; }
+
+/* Tableaux */
+table { width: 100%; border-collapse: collapse; margin-top: 10px; background: #fff; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+th { background-color: #eee; }
+
+/* Badges (Statuts) */
+.badge-valide { background-color: #d4edda; color: #155724; padding: 4px 8px; border-radius: 4px; font-size: 0.9em; }
+.badge-attente { background-color: #fff3cd; color: #856404; padding: 4px 8px; border-radius: 4px; font-size: 0.9em; }
+
+/* Message Flash */
+#flash-message {
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Mise en page Admin (Flexbox) */
+.admin-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+.admin-grid .card { flex: 1; min-width: 300px; }
+
+/* Utilitaires */
+.text-center { text-align: center; }
+.row { display: flex; gap: 10px; }
+.col { flex: 1; }
+
+
+.logo {text-decoration: none;
+    color: #FF9800;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;}

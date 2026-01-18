@@ -85,12 +85,12 @@ $liste_trajets = $pdo->query("
         .container { display: flex; flex-wrap: wrap; gap: 20px; }
         .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); flex: 1; min-width: 300px; }
         .full-width { width: 100%; }
-        h2 { border-bottom: 2px solid #2196F3; padding-bottom: 10px; margin-top: 0; font-size: 1.2em; }
+        h2 { border-bottom: 2px solid #FF9800; padding-bottom: 10px; margin-top: 0; font-size: 1.2em; }
         label { display: block; margin: 10px 0 5px; font-weight: bold; }
         input, select { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
-        button { background-color: #2196F3; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; margin-top: 15px; width: 100%; }
-        button:hover { background-color: #0b7dda; }
-        .message { background-color: #dff0d8; color: #3c763d; padding: 10px; border-radius: 4px; margin-bottom: 20px; text-align: center; }
+        button { background-color: #FF9800; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; margin-top: 15px; width: 100%; }
+        button:hover { background-color: #FF9800; }
+        .message { background-color: #dff0d8; color: #FF9800; padding: 10px; border-radius: 4px; margin-bottom: 20px; text-align: center; }
         table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9em; }
         th, td { border: 1px solid #ddd; padding: 6px; text-align: left; }
         th { background-color: #eee; }
@@ -180,7 +180,7 @@ $liste_trajets = $pdo->query("
                 <input type="number" name="places" required min="1" placeholder="Ex: 3">
                 <small style="color:gray;">Doit être <= à la capacité du véhicule.</small>
                 
-                <button type="submit" style="background-color: #4CAF50;">Publier le Trajet</button>
+                <button type="submit" style="background-color: #FF9800;">Publier le Trajet</button>
             </form>
         </div>
 

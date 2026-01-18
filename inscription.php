@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         .form-group { margin-bottom: 15px; }
         label { display: block; margin-bottom: 5px; }
         input { width: 100%; padding: 8px; box-sizing: border-box; } /* box-sizing pour éviter que ça dépasse */
-        button { background-color: #008CBA; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+        button { background-color: #FF9800; color: white; padding: 10px 15px; border: none; cursor: pointer; }
         .row { display: flex; gap: 10px; } /* Pour mettre Nom et Prénom côte à côte */
         .col { flex: 1; }
     </style>
