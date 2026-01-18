@@ -1,9 +1,10 @@
 <?php
-// includes/db.php
+// db_connect/db.php
 
 $host = 'localhost';
-$db   = 'ecoschool_ride';
-$user = 'root';      // Par défaut sur WAMP/XAMPP
+$db   = 'echoschool_ride';
+$user = 'root';      
+$pass = '';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
 $options = [
@@ -14,7 +15,6 @@ $options = [
 
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
-    // On ne met pas de "echo" ici pour ne pas casser le design des pages
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
