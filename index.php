@@ -41,17 +41,9 @@ if ($user && password_verify($password, $user['mot_de_passe'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoSchool Ride - Connexion</title>
-    <style>
-        body { font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
-        .error { color: red; }
-        .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; }
-        input { width: 100%; padding: 8px; box-sizing: border-box; }
-        button { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; cursor: pointer; }
-    </style>
 </head>
 <body>
-
+    <link rel="stylesheet" href="style.css">
     <h1>Bienvenue sur EcoSchool Ride</h1>
     <p>La solution de covoiturage pour l'école de vos enfants.</p>
 
@@ -75,6 +67,29 @@ if ($user && password_verify($password, $user['mot_de_passe'])) {
         
         <p>Pas encore de compte ? <a href="inscription.php">Créer un compte parent</a></p>
     </div>
-
+<script src="script.js"></script>
 </body>
+<?php if(isset($_SESSION['message']) && !empty($_SESSION['message'])): ?>
+    
+    <?php $type = $_SESSION['msg_type'] ?? 'error'; ?>
+    <?php $color = ($type == 'success') ? '#d4edda' : '#f8d7da'; ?>
+    <?php $text_color = ($type == 'success') ? '#155724' : '#721c24'; ?>
+
+    <div id="flash-message" style="
+        background-color: <?= $color ?>; 
+        color: <?= $text_color ?>; 
+        padding: 15px; 
+        margin: 20px 0; 
+        border-radius: 5px; 
+        border: 1px solid <?= $text_color ?>;">
+        
+        <?= $_SESSION['message'] ?>
+    </div>
+
+    <?php 
+        unset($_SESSION['message']); 
+        unset($_SESSION['msg_type']);
+    ?>
+
+<?php endif; ?>
 </html>

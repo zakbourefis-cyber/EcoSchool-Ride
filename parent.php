@@ -103,17 +103,13 @@ $mes_inscriptions = $stmt->fetchAll();
     <div style="display:flex; justify-content:space-between; align-items:center;">
         <h1>Bonjour, <?= htmlspecialchars($_SESSION['user_name']) ?></h1>
         
-        <div style="display:flex; gap:10px;">
             <?php if(isset($_SESSION['est_admin']) && $_SESSION['est_admin'] == 1): ?>
-                <a href="admin.php" style="background-color:#d9534f; color:white; padding:10px; text-decoration:none; border-radius:5px;">
+                <a href="admin.php">
                     ⚙️ Accès Admin
                 </a>
             <?php endif; ?>
-            
-            <a href="logout.php" style="color:red; align-self:center;">Déconnexion</a>
-        </div>
 
-        <a href="logout.php" style="color:red;">Déconnexion</a>
+        <a href="index.php" style="color:red;">Déconnexion</a>
     </div>
 
     <?php if(!empty($message)): ?>
